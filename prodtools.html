@@ -9,33 +9,32 @@
 </head>
 <body>
     <h1>
-        Prodtools
+        Prodtools OVH
     </h1>
-    <div class="content__generator">
+    <div id="content__generator">
         <div>
             <label>Nom de l'archive : </label>
-            <input type="text" name="Nom de l'archive" id="name">
-            <p></p>
-            <button id="copy">Copy</button>
+            <input type="text" name="Nom de l'archive" id="name-archive">
+            <button class="copy not-generated">Copy</button>
         </div>
         <div>
             <label>Nom de dossier de l'archive : </label>
-            <input type="text" name="Nom de dossier de l'archive" id="name">
+            <input type="text" name="Nom de dossier de l'archive" id="name-file-archive">
         </div>
         <div>
             <label>Nom du dossier distant : </label>
-            <input type="text" name="Nom du dossier distant" id="name">
+            <input type="text" name="Nom du dossier distant" id="name-file-ext">
         </div>
         <button id="generate">Generate</button>
     </div>
-    <div class="content__generate">
-        <div class="commandescp">
+    <div id="content__generate">
+        <div class="commandescp not-generated">
             <label>Nom du dossier distant : </label>
-            <p></p>
-            <button id="copy">Copy</button>
+            <button class="copy">Copy</button>
         </div>
         <button id="return">Back</button>
     </div>
+    <!-- <button id="test">Test</button> -->
 </body>
 <script src="prodtools.js"></script>
 </html>

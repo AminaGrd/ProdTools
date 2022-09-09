@@ -6,22 +6,22 @@ html {
 body {
   background-color: rgb(29, 29, 29);
 }
+body .not-generated {
+  display: none;
+}
+body .not-generated.not-generated--show {
+  display: block;
+}
 
 h1 {
   color: white;
   text-align: center;
 }
 
-.content__generator div label {
+#content__generator div label {
   color: white;
 }
-.content__generator div #copy {
-  display: none;
-}
 
-.content__generate {
-  display: none;
-}
-.content__generate div label {
+#content__generate div label {
   color: white;
 }/*# sourceMappingURL=prodtools.css.map */

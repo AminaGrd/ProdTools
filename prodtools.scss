@@ -4,23 +4,25 @@ html{
 }
 body{
     background-color: rgb(29, 29, 29);
+    .not-generated{
+        display: none;
+        &.not-generated--show{
+            display: block;
+        }
+    }
 }
 h1{
     color: white;
     text-align: center;
 }
-.content__generator {
+#content__generator {
     div{
         label{
         color: white;
         }
-    #copy{
-        display: none;
-    }
     }
 }
-.content__generate {
-    display: none;
+#content__generate {
     div{
         label{
         color: white;
