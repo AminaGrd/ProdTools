@@ -9,9 +9,6 @@ body {
 body .not-generated {
   display: none;
 }
-body .not-generated.not-generated--show {
-  display: block;
-}
 
 h1 {
   color: white;
@@ -20,6 +17,11 @@ h1 {
 
 #content__generator div label {
   color: white;
+}
+#content__generator .name-archive {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #content__generate div label {

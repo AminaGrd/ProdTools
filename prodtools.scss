@@ -6,9 +6,9 @@ body{
     background-color: rgb(29, 29, 29);
     .not-generated{
         display: none;
-        &.not-generated--show{
-            display: block;
-        }
+        // &.not-generated--show{
+        //     display: block;
+        // }
     }
 }
 h1{
@@ -20,6 +20,11 @@ h1{
         label{
         color: white;
         }
+    }
+    .name-archive{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 }
 #content__generate {
