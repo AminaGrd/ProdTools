@@ -9,6 +9,10 @@ body {
 body .not-generated {
   display: none;
 }
+body textarea {
+  width: 60vw;
+  height: 5vh;
+}
 
 h1 {
   color: white;

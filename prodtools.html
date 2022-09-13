@@ -14,30 +14,27 @@
     <div id="content__generator">
         <div class="name-archive">
             <label>Nom de l'archive : </label>
-            <input type="text" name="Nom de l'archive" id="name-archive">
-            <button class="copy not-generated">Copy</button>
+            <textarea type="text" name="Nom de l'archive" id="name-archive"></textarea>
+            <button class="copy not-generated" onclick="copyToClipBoardArchive()">Copy</button>
         </div>
         <div class="unshow">
             <label>Nom de dossier de l'archive : </label>
-            <input type="text" name="Nom de dossier de l'archive" id="name-file-archive">
+            <textarea type="text" name="Nom de dossier de l'archive" id="name-file-archive"></textarea>
         </div>
         <div class="unshow">
             <label>Nom du dossier distant : </label>
-            <input type="text" name="Nom du dossier distant" id="name-file-ext">
+            <textarea type="text" name="Nom du dossier distant" id="name-file-ext"></textarea>
         </div>
         <button id="generate" class="unshow" >Generate</button>
     </div>
     <div id="content__generate" class="not-generated">
         <div class="commandescp">
             <label>Commande scp : </label>
-            <input type="text" name="comandescp" id="scp">
-            <button class="copy">Copy</button>
+            <textarea type="text" name="comandescp" id="scp"></textarea>
+            <button class="copy" onclick="copyToClipBoardSCP()">Copy</button>
         </div>
     </div>
-    <!-- <button id="return" class="not-generated">Back</button> -->
     <input type="button" value="Back" id="return" class="not-generated" onClick="document.location.reload(true)">
-    <!-- <input type="reset" id="return" class="not-generated" value="Back"> -->
-    <!-- <button id="test">Test</button> -->
 </body>
 <script src="prodtools.js"></script>
 </html>
