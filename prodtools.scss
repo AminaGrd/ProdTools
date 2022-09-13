@@ -1,31 +1,84 @@
+@font-face {
+    font-family: "Calling Code";
+    src: url("../font/CallingCode-Regular.otf");
+}
+
 html{
     font-size: 15px;
     font-family: sans-serif;
 }
 body{
     background-color: rgb(29, 29, 29);
-    .not-generated{
-        display: none;
-    }
-    textarea{
-        width: 60vw;
-        height: 5vh;
-    }
 }
 h1{
     color: white;
     text-align: center;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
 }
+.not-generated{
+    display: none;
+}
+.input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2vh;
+    margin-right: 10vw;
+    label{
+        padding-left: 5vw;
+        width: 20vw;
+    }
+    textarea{
+        width: 100%;
+        height: 40px;
+        background-color: grey;
+        color: white;
+        font-family: "Calling Code";
+        font-size: 18px;
+        &#scp{
+            height: 100px;
+        }
+    }
+    >button{
+        background-color: white;
+        color: rgb(104, 0, 0);
+        padding: 10px 30px;
+        margin-left: 20px;
+        border: none;
+        &:hover{
+            background-color: rgb(104, 0, 0);
+            color: white;
+        }
+        &:active{
+            background-color: rgb(104, 0, 0);
+            color: white;
+            box-shadow: inset 1.5px 1.5px 2px rgba(0, 0, 0, 0.727);
+        }
+    }
+}
+
 #content__generator {
     div{
         label{
         color: white;
         }
     }
-    .name-archive{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+    #generate{
+        color: white;
+        background-color: rgb(104, 0, 0);
+        border: none;
+        padding: 15px 40px;
+        display: block;
+        margin-left: auto;
+        margin-right: 10vw;
+        margin-top: 5vh;
+        &:hover{
+            background-color: rgba(104, 0, 0, 0.556);
+        }
+        &:active{
+            box-shadow: inset 1px 1px 4px black;
+        }
     }
 }
 #content__generate {
@@ -33,5 +86,21 @@ h1{
         label{
         color: white;
         }
+    }
+}
+#return{
+    color: white;
+    background-color: rgb(104, 0, 0);
+    border: none;
+    padding: 15px 40px;
+    display: none;
+    margin-left: auto;
+    margin-right: 10vw;
+    margin-top: 5vh;
+    &:hover{
+        background-color: rgba(104, 0, 0, 0.556);
+    }
+    &:active{
+        box-shadow: inset 1px 1px 4px black;
     }
 }

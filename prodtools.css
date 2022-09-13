@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Calling Code";
+  src: url("../font/CallingCode-Regular.otf");
+}
 html {
   font-size: 15px;
   font-family: sans-serif;
@@ -6,28 +10,94 @@ html {
 body {
   background-color: rgb(29, 29, 29);
 }
-body .not-generated {
-  display: none;
-}
-body textarea {
-  width: 60vw;
-  height: 5vh;
-}
 
 h1 {
   color: white;
   text-align: center;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+}
+
+.not-generated {
+  display: none;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2vh;
+  margin-right: 10vw;
+}
+.input label {
+  padding-left: 5vw;
+  width: 20vw;
+}
+.input textarea {
+  width: 100%;
+  height: 40px;
+  background-color: grey;
+  color: white;
+  font-family: "Calling Code";
+  font-size: 18px;
+}
+.input textarea#scp {
+  height: 100px;
+}
+.input > button {
+  background-color: white;
+  color: rgb(104, 0, 0);
+  padding: 10px 30px;
+  margin-left: 20px;
+  border: none;
+}
+.input > button:hover {
+  background-color: rgb(104, 0, 0);
+  color: white;
+}
+.input > button:active {
+  background-color: rgb(104, 0, 0);
+  color: white;
+  box-shadow: inset 1.5px 1.5px 2px rgba(0, 0, 0, 0.727);
 }
 
 #content__generator div label {
   color: white;
 }
-#content__generator .name-archive {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+#content__generator #generate {
+  color: white;
+  background-color: rgb(104, 0, 0);
+  border: none;
+  padding: 15px 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: 10vw;
+  margin-top: 5vh;
+}
+#content__generator #generate:hover {
+  background-color: rgba(104, 0, 0, 0.556);
+}
+#content__generator #generate:active {
+  box-shadow: inset 1px 1px 4px black;
 }
 
 #content__generate div label {
   color: white;
+}
+
+#return {
+  color: white;
+  background-color: rgb(104, 0, 0);
+  border: none;
+  padding: 15px 40px;
+  display: none;
+  margin-left: auto;
+  margin-right: 10vw;
+  margin-top: 5vh;
+}
+#return:hover {
+  background-color: rgba(104, 0, 0, 0.556);
+}
+#return:active {
+  box-shadow: inset 1px 1px 4px black;
 }/*# sourceMappingURL=prodtools.css.map */

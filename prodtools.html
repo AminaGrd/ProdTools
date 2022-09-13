@@ -9,26 +9,27 @@
 </head>
 <body>
     <h1>
-        Prodtools OVH
+        Prodtools OVH - Preprod Yupanki
     </h1>
     <div id="content__generator">
-        <div class="name-archive">
+        <div class="input name-archive">
             <label>Nom de l'archive : </label>
             <textarea type="text" name="Nom de l'archive" id="name-archive"></textarea>
             <button class="copy not-generated" onclick="copyToClipBoardArchive()">Copy</button>
         </div>
-        <div class="unshow">
+        <div class="input name-file-archive unshow">
             <label>Nom de dossier de l'archive : </label>
             <textarea type="text" name="Nom de dossier de l'archive" id="name-file-archive"></textarea>
         </div>
-        <div class="unshow">
+        <div class="input name-file-ext unshow">
             <label>Nom du dossier distant : </label>
             <textarea type="text" name="Nom du dossier distant" id="name-file-ext"></textarea>
         </div>
+        
         <button id="generate" class="unshow" >Generate</button>
     </div>
     <div id="content__generate" class="not-generated">
-        <div class="commandescp">
+        <div class="input commandescp">
             <label>Commande scp : </label>
             <textarea type="text" name="comandescp" id="scp"></textarea>
             <button class="copy" onclick="copyToClipBoardSCP()">Copy</button>

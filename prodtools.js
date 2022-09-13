@@ -25,6 +25,9 @@ document.getElementById('generate').addEventListener('click', () => {
 
     document.getElementById('scp').value = SCP
 
+    const resetButton = document.getElementbyId('return');
+    resetButton.style.display = 'block';
+
 });
 
 const resetButton = document.getElementbyId('return');
