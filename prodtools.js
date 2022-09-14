@@ -7,6 +7,7 @@ const unshow2 = document.getElementsByClassName('unshow')[2];
 const warning = document.getElementsByClassName('warning')[0];
 const warning1 = document.getElementsByClassName('warning')[1];
 const warning2 = document.getElementsByClassName('warning')[2];
+const labelArchive = document.getElementsByClassName('labelarchive')[0];
 
 
 document.getElementById('generate').addEventListener('click', () => {
@@ -34,6 +35,8 @@ document.getElementById('generate').addEventListener('click', () => {
             warning2.style.visibility = 'hidden';
         }
     } else{
+            labelArchive.style.margin = "auto auto auto 5vw";
+
             warning.style.display = 'none';
 
             generated.style.display = 'block';
@@ -47,6 +50,7 @@ document.getElementById('generate').addEventListener('click', () => {
 
             const resetButton = document.getElementbyId('return');
             resetButton.style.display = 'block';
+
         }
     
     // console.log(`scp -r ${namefileA}instaler.php espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt} && scp -r ${namefileA}${nameA} espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt}`);
