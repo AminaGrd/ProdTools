@@ -19,6 +19,9 @@ h1{
 .not-generated{
     display: none;
 }
+::placeholder{
+    color: rgba(255, 255, 255, 0.2);
+}
 .input{
     display: flex;
     flex-direction: row;
@@ -32,7 +35,7 @@ h1{
         padding-top: 10px;
         padding-bottom: 10px;;
         width: 20vw;
-        border-left: solid 2px black;
+        border-left: solid 2px rgb(183, 0, 0);
     }
     .flex-column{
         display: flex;
