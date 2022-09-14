@@ -26,8 +26,23 @@ h1{
     margin-bottom: 2vh;
     margin-right: 10vw;
     label{
-        padding-left: 5vw;
+        margin-left: 5vw;
+        padding-left: 1vw;
+        padding-top: 10px;
+        padding-bottom: 10px;;
         width: 20vw;
+        margin-bottom: 3vh;
+        border-left: solid 2px black;
+    }
+    .flex-column{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        >.warning{
+            margin: 2px 0 0 0;
+            color: rgb(183, 0, 0);
+            visibility: hidden;
+        }
     }
     textarea{
         width: 100%;
@@ -60,7 +75,7 @@ h1{
 }
 
 #content__generator {
-    div{
+    >div{
         label{
         color: white;
         }

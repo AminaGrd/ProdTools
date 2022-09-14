@@ -4,6 +4,9 @@ const generated2 = document.getElementsByClassName('not-generated')[2];
 const unshow = document.getElementsByClassName('unshow')[0];
 const unshow1 = document.getElementsByClassName('unshow')[1];
 const unshow2 = document.getElementsByClassName('unshow')[2];
+const warning = document.getElementsByClassName('warning')[0];
+const warning1 = document.getElementsByClassName('warning')[1];
+const warning2 = document.getElementsByClassName('warning')[2];
 
 
 document.getElementById('generate').addEventListener('click', () => {
@@ -12,46 +15,49 @@ document.getElementById('generate').addEventListener('click', () => {
     const namefileA = document.getElementById('name-file-archive').value;
     const namefileExt = document.getElementById('name-file-ext').value;
 
-    console.log(`scp -r ${namefileA}instaler.php espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt} && scp -r ${namefileA}${nameA} espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt}`);
+    const SCP = `scp -r ${namefileA}instaler.php espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt} && scp -r ${namefileA}${nameA} espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt}`;
+    
+    if (nameA == "" || namefileA == "" || namefileExt == "") {
+        if (nameA == "") {
+            warning.style.visibility = 'visible';
+        }
+        if (namefileA == "") {
+            warning1.style.visibility = 'visible';
+        }
+        if (namefileExt == "") {
+            warning2.style.visibility = 'visible';
+        }
+    } else{
+            warning.style.display = 'none';
 
-    const SCP = `scp -r ${namefileA}instaler.php espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt} && scp -r ${namefileA}${nameA} espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt}`
+            generated.style.display = 'block';
+            generated1.style.display = 'block';
+            generated2.style.display = 'block';
+            unshow.style.display = 'none';
+            unshow1.style.display = 'none';
+            unshow2.style.display = 'none';
 
-    generated.style.display = 'block';
-    generated1.style.display = 'block';
-    generated2.style.display = 'block';
-    unshow.style.display = 'none';
-    unshow1.style.display = 'none';
-    unshow2.style.display = 'none';
+            document.getElementById('scp').value = SCP;
 
-    document.getElementById('scp').value = SCP
-
-    const resetButton = document.getElementbyId('return');
-    resetButton.style.display = 'block';
-
+            const resetButton = document.getElementbyId('return');
+            resetButton.style.display = 'block';
+        }
+    
+    // console.log(`scp -r ${namefileA}instaler.php espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt} && scp -r ${namefileA}${nameA} espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt}`);
 });
 
 const resetButton = document.getElementbyId('return');
 resetButton.onclick= reloadPage;
-
 function reloadPage(){
     window.location.reload();
 }
 
 function copyToClipBoardArchive() {
-
     const content = document.getElementById('name-archive').value;
-    
     navigator.clipboard.writeText(content)
-
 }
 function copyToClipBoardSCP() {
-
     const content = document.getElementById('scp').value;
-    
     navigator.clipboard.writeText(content)
-
 }
 
-
-
-//EXEMPLE scp -r /c/Users/Acs/Downloads/installer.php espripk-preprod@ssh.cluster030.hosting.ovh.net:~/experience-industrie-stage && scp -r /c/Users/Acs/Downloads/20220908_experienceindustrie_preprod_161b3a08128444541812_20220908120447_archive.zip espripk-preprod@ssh.cluster030.hosting.ovh.net:~/experience-industrie-stage
