@@ -22,7 +22,7 @@ document.getElementById('generate').addEventListener('click', () => {
     const namefileExte = document.getElementById('name-file-ext');
     
 
-    const SCP = `scp -r ${namefileA}instaler.php espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt} && scp -r ${namefileA}${nameA} espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt}`;
+    const SCP = `scp -r ${namefileA}installer.php espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt} && scp -r ${namefileA}${nameA} espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt}`;
     
     if (nameA == "" || namefileA == "" || namefileExt == "") {
         if (nameA == "") {
