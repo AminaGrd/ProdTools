@@ -20,12 +20,18 @@ document.getElementById('generate').addEventListener('click', () => {
     if (nameA == "" || namefileA == "" || namefileExt == "") {
         if (nameA == "") {
             warning.style.visibility = 'visible';
+        } else{
+            warning.style.visibility = 'hidden';
         }
         if (namefileA == "") {
             warning1.style.visibility = 'visible';
+        } else{
+            warning1.style.visibility = 'hidden';
         }
         if (namefileExt == "") {
             warning2.style.visibility = 'visible';
+        } else{
+            warning2.style.visibility = 'hidden';
         }
     } else{
             warning.style.display = 'none';
