@@ -8,6 +8,8 @@ const warning = document.getElementsByClassName('warning')[0];
 const warning1 = document.getElementsByClassName('warning')[1];
 const warning2 = document.getElementsByClassName('warning')[2];
 const labelArchive = document.getElementsByClassName('labelarchive')[0];
+const resultStyle = document.getElementsByClassName('result')[0];
+const resultStyle1 = document.getElementsByClassName('result')[1];
 
 
 document.getElementById('generate').addEventListener('click', () => {
@@ -35,21 +37,29 @@ document.getElementById('generate').addEventListener('click', () => {
             warning2.style.visibility = 'hidden';
         }
     } else{
-            labelArchive.style.margin = "auto auto auto 5vw";
+        labelArchive.style.margin = "auto auto auto 5vw";
 
-            warning.style.display = 'none';
+        warning.style.display = 'none';
 
-            generated.style.display = 'block';
-            generated1.style.display = 'block';
-            generated2.style.display = 'block';
-            unshow.style.display = 'none';
-            unshow1.style.display = 'none';
-            unshow2.style.display = 'none';
+        generated.style.display = 'block';
+        generated1.style.display = 'block';
+        generated2.style.display = 'block';
+        unshow.style.display = 'none';
+        unshow1.style.display = 'none';
+        unshow2.style.display = 'none';
 
-            document.getElementById('scp').value = SCP;
+        document.getElementById('scp').value = SCP;
 
-            const resetButton = document.getElementbyId('return');
-            resetButton.style.display = 'block';
+        resultStyle.style.background = "black";
+        resultStyle.style.color = "rgb(104, 0, 0)";
+        resultStyle.style.border = "none";
+        resultStyle1.style.background = "black";
+        resultStyle1.style.color = "rgb(104, 0, 0)";
+        resultStyle1.style.border = "none";
+        // resultStyle1.nameAa.style.color = "white";
+
+        const resetButton = document.getElementbyId('return');
+        resetButton.style.display = 'block';
 
         }
     
