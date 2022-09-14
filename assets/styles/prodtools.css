@@ -1,10 +1,15 @@
 @font-face {
   font-family: "Calling Code";
-  src: url("../font/CallingCode-Regular.otf");
+  src: url("assets/font/CallingCode-Regular.otf");
 }
+:root {
+  --main-RedColor: rgb(180, 0, 0);
+  --main-RedColorAlpha: rgba(184, 0, 0, 0.5);
+}
+
 html {
   font-size: 15px;
-  font-family: sans-serif;
+  font-family: "Calling Code";
 }
 
 body {
@@ -47,8 +52,8 @@ h1 {
   padding-left: 1vw;
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 20vw;
-  border-left: solid 2px rgb(104, 0, 0);
+  width: 25vw;
+  border-left: solid 2px var(--main-RedColor);
 }
 .input .flex-column {
   display: flex;
@@ -57,7 +62,7 @@ h1 {
 }
 .input .flex-column > .warning {
   margin: 2px 0 0 0;
-  color: rgb(104, 0, 0);
+  color: var(--main-RedColor);
   visibility: hidden;
 }
 .input textarea {
@@ -74,17 +79,17 @@ h1 {
 }
 .input > button {
   background-color: white;
-  color: rgb(104, 0, 0);
+  color: var(--main-RedColor);
   padding: 10px 30px;
   margin-left: 20px;
   border: none;
 }
 .input > button:hover {
-  background-color: rgb(104, 0, 0);
+  background-color: var(--main-RedColor);
   color: white;
 }
 .input > button:active {
-  background-color: rgb(104, 0, 0);
+  background-color: var(--main-RedColor);
   color: white;
   box-shadow: inset 1.5px 1.5px 2px rgba(0, 0, 0, 0.727);
 }
@@ -94,7 +99,7 @@ h1 {
 }
 #content__generator #generate {
   color: white;
-  background-color: rgb(104, 0, 0);
+  background-color: var(--main-RedColor);
   border: none;
   padding: 15px 40px;
   display: block;
@@ -103,7 +108,7 @@ h1 {
   margin-top: 5vh;
 }
 #content__generator #generate:hover {
-  background-color: rgba(104, 0, 0, 0.556);
+  background-color: var(--main-RedColorAlpha);
 }
 #content__generator #generate:active {
   box-shadow: inset 1px 1px 4px black;
@@ -115,7 +120,7 @@ h1 {
 
 #return {
   color: white;
-  background-color: rgb(104, 0, 0);
+  background-color: var(--main-RedColor);
   border: none;
   padding: 15px 40px;
   display: none;
@@ -124,7 +129,7 @@ h1 {
   margin-top: 5vh;
 }
 #return:hover {
-  background-color: rgba(104, 0, 0, 0.556);
+  background-color: var(--main-RedColorAlpha);
 }
 #return:active {
   box-shadow: inset 1px 1px 4px black;

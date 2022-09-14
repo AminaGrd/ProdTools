@@ -1,11 +1,14 @@
 @font-face {
     font-family: "Calling Code";
-    src: url("../font/CallingCode-Regular.otf");
+    src: url("assets/font/CallingCode-Regular.otf");
 }
-
+:root{
+    --main-RedColor: rgb(180, 0, 0);
+    --main-RedColorAlpha: rgba(184, 0, 0, 0.5);
+}
 html{
     font-size: 15px;
-    font-family: sans-serif;
+    font-family: "Calling Code";
 }
 body{
     background-color: rgb(29, 29, 29);
@@ -34,8 +37,8 @@ h1{
         padding-left: 1vw;
         padding-top: 10px;
         padding-bottom: 10px;;
-        width: 20vw;
-        border-left: solid 2px rgb(104, 0, 0);
+        width: 25vw;
+        border-left: solid 2px var(--main-RedColor);
     }
     .flex-column{
         display: flex;
@@ -43,7 +46,7 @@ h1{
         width: 100%;
         >.warning{
             margin: 2px 0 0 0;
-            color: rgb(104, 0, 0);
+            color: var(--main-RedColor);
             visibility: hidden;
         }
     }
@@ -61,16 +64,16 @@ h1{
     }
     >button{
         background-color: white;
-        color: rgb(104, 0, 0);
+        color: var(--main-RedColor);
         padding: 10px 30px;
         margin-left: 20px;
         border: none;
         &:hover{
-            background-color: rgb(104, 0, 0);
+            background-color: var(--main-RedColor);
             color: white;
         }
         &:active{
-            background-color: rgb(104, 0, 0);
+            background-color: var(--main-RedColor);
             color: white;
             box-shadow: inset 1.5px 1.5px 2px rgba(0, 0, 0, 0.727);
         }
@@ -85,7 +88,7 @@ h1{
     }
     #generate{
         color: white;
-        background-color: rgb(104, 0, 0);
+        background-color: var(--main-RedColor);
         border: none;
         padding: 15px 40px;
         display: block;
@@ -93,7 +96,7 @@ h1{
         margin-right: 10vw;
         margin-top: 5vh;
         &:hover{
-            background-color: rgba(104, 0, 0, 0.556);
+            background-color: var(--main-RedColorAlpha);
         }
         &:active{
             box-shadow: inset 1px 1px 4px black;
@@ -109,7 +112,7 @@ h1{
 }
 #return{
     color: white;
-    background-color: rgb(104, 0, 0);
+    background-color: var(--main-RedColor);
     border: none;
     padding: 15px 40px;
     display: none;
@@ -117,7 +120,7 @@ h1{
     margin-right: 10vw;
     margin-top: 5vh;
     &:hover{
-        background-color: rgba(104, 0, 0, 0.556);
+        background-color: var(--main-RedColorAlpha);
     }
     &:active{
         box-shadow: inset 1px 1px 4px black;

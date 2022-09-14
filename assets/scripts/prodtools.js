@@ -17,24 +17,34 @@ document.getElementById('generate').addEventListener('click', () => {
     const nameA = document.getElementById('name-archive').value;
     const namefileA = document.getElementById('name-file-archive').value;
     const namefileExt = document.getElementById('name-file-ext').value;
+    const nameAa = document.getElementById('name-archive');
+    const namefileAa = document.getElementById('name-file-archive');
+    const namefileExte = document.getElementById('name-file-ext');
+    
 
     const SCP = `scp -r ${namefileA}instaler.php espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt} && scp -r ${namefileA}${nameA} espripk-preprod@ssh.cluster030.hosting.ovh.net:${namefileExt}`;
     
     if (nameA == "" || namefileA == "" || namefileExt == "") {
         if (nameA == "") {
             warning.style.visibility = 'visible';
+            nameAa.style.border = 'solid 1px rgb(184, 0, 0)';
         } else{
             warning.style.visibility = 'hidden';
+            nameAa.style.border = 'none';
         }
         if (namefileA == "") {
             warning1.style.visibility = 'visible';
+            namefileAa.style.border = 'solid 1px rgb(184, 0, 0)';
         } else{
             warning1.style.visibility = 'hidden';
+            namefileAa.style.border = 'none';
         }
         if (namefileExt == "") {
             warning2.style.visibility = 'visible';
+            namefileExte.style.border = 'solid 1px rgb(184, 0, 0)';
         } else{
             warning2.style.visibility = 'hidden';
+            namefileExte.style.border = 'none';
         }
     } else{
         labelArchive.style.margin = "auto auto auto 5vw";
@@ -56,7 +66,7 @@ document.getElementById('generate').addEventListener('click', () => {
         resultStyle1.style.background = "black";
         resultStyle1.style.color = "rgb(104, 0, 0)";
         resultStyle1.style.border = "none";
-        // resultStyle1.nameAa.style.color = "white";
+        resultStyle1.nameA.style.color = "white";
 
         const resetButton = document.getElementbyId('return');
         resetButton.style.display = 'block';
